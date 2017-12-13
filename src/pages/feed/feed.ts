@@ -15,12 +15,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FeedPage {
   public nome_usuario:string = "Lucas Primitão"
+  public array=
+  [
+    {
+      name: 'Jenny',
+      age: 18,
+      status: 'Online',
+      img: 'assets/imgs/je.jpg'
+    },
+    {
+      name: 'Ale',
+      age: 23,
+      status: 'Offline',
+      img: 'assets/imgs/primitz.png'
+    },
+    {
+      name: 'Vitor',
+      age: 24,
+      status: 'Aiui',
+      img: 'assets/imgs/je.jpg'
+    }
+  ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FeedPage');
+    this.recebeDados('teste primitz')
   }
-
+  recebeDados(Data)  {
+    console.log(Data)
+  }
 }
