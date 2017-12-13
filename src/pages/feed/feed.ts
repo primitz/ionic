@@ -36,14 +36,14 @@ export class FeedPage {
       img: 'assets/imgs/je.jpg'
     }
   ]
-
+  recebeDados(Data)  {
+    console.log(Data)
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    this.recebeDados('teste primitz')
+    console.log('ionViewDidLoad FeedPage');
   }
-  recebeDados(Data)  {
-    console.log(Data)
-  }
+
 }

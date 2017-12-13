@@ -14,20 +14,20 @@
 
 
 <ion-content padding>
-  <ion-card>
+  <!-- <ion-card>
 
     <ion-item>
       <ion-avatar item-start>
-        <img src="img/primitz.png">
+        <img src="assets/imgs/primitz.png">
       </ion-avatar>
       <h2>{{ nome_usuario }}</h2>
       <p>October 13, 1992</p>
     </ion-item>
 
-    <img src="./img/primitz.png">
+    <img src="assets/imgs/montain.jpg">
 
     <ion-card-content>
-      <p>Criando o priemrio app com Ionic!</p>
+      <p>Criando o primeiro app com Ionic!</p>
     </ion-card-content>
 
     <ion-row>
@@ -49,6 +49,65 @@
         </ion-note>
       </ion-col>
     </ion-row>
+  </ion-card> -->
 
+  <!-- Teste de CARD -->
+  <ion-card *ngFor="let user of array">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-11>
+          <div>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="{{ user.img }}">
+              </ion-avatar>
+              <h2>{{ user.name }}</h2>
+              <p>Idade: {{ user.age }}</p>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col col-1 center text-center>
+          <div>
+            <p>{{ user.status }}</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <ion-card-title padding>
+            Titulo teste
+          </ion-card-title>
+          <ion-card-content>
+            Content teste
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
+
+  <!-- TESTE DE GRIDD -->
+  <!-- <ion-card>
+    <p padding>
+      Equal-width columns
+    </p>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>1 of 2</div>
+        </ion-col>
+        <ion-col>
+          <div>2 of 2</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>1 of 3</div>
+        </ion-col>
+        <ion-col>
+          <div>2 of 3</div>
+        </ion-col>
+        <ion-col>
+          <div>3 of 3</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card> -->
 </ion-content>
